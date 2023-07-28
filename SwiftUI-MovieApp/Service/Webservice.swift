@@ -17,7 +17,7 @@ class Webservice {
     
     func loadMovies() async throws -> [Movie] {
         
-        guard let url = URL(string: "https://www.omdbapi.com/?s=Batman&page=2&apikey=564727fa") else {
+        guard let url = URL(string: "https://www.omdbapi.com/?s=Batman&page=2&apikey=b2b00439") else {
             throw NetworkError.badUrl
         }
         
@@ -28,7 +28,7 @@ class Webservice {
     
     func loadMovieBy(_ movieId: String) async throws -> MovieDetail {
         
-        guard let url = URL(string: "http://www.omdbapi.com/?i=\(movieId)&apikey=564727fa") else {
+        guard let url = URL(string: "http://www.omdbapi.com/?i=\(movieId)&apikey=b2b00439") else {
             throw NetworkError.badUrl
         }
         
@@ -39,19 +39,4 @@ class Webservice {
         
         return movieDetail
     }
-    
-    func loadNewsArticleBy(_ keyword: String) async throws -> [NewsArticle] {
-        
-        guard let url = URL(string: "https://newsapi.org/v2/everything?q=\(keyword)&apiKey=0cf790498275413a9247f8b94b3843fd&pageSize=10") else {
-            throw NetworkError.badUrl
-        }
-        
-        let (data, _) = try await URLSession.shared.data(from: url)
-        guard let newsArticleResponse = try? JSONDecoder().decode(NewsArticleResponse.self, from: data) else {
-            throw NetworkError.invalidRequest
-        }
-        
-        return newsArticleResponse.articles
-    }
-    
 }

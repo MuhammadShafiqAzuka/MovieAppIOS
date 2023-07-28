@@ -13,29 +13,27 @@ struct MovieDetailView: View {
     let movie: Movie
     
     var body: some View {
-        List {
-            if let movieDetail = store.movieDetail {
-                AsyncImage(url: movieDetail.poster)
-                Text(movieDetail.title)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                
-                if !store.newsArticles.isEmpty {
-                    ForEach(store.newsArticles) { article in
-                        Text(article.title)
-                    }
-                } else {
-                    Text("No articles found.")
+        if #available(iOS 15.0, *) {
+            List {
+                if let movieDetail = store.movieDetail {
+                    AsyncImage(url: movieDetail.poster)
+                    Text(movieDetail.title)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                    
+                    Text(movieDetail.plot)
+                    
                 }
-                
+            }.task {
+                do {
+                    try await store.fetchMovieById(movie.id)
+                    //try await store.fetchArticlesByKeyword(movie.title)
+                } catch {
+                    print(error)
+                }
             }
-        }.task {
-            do {
-                try await store.fetchMovieById(movie.id)
-                try await store.fetchArticlesByKeyword(movie.title)
-            } catch {
-                print(error)
-            }
+        } else {
+            // Fallback on earlier versions
         }
     }
 }

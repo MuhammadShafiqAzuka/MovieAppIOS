@@ -12,7 +12,6 @@ import Foundation
 class Store: ObservableObject {
     
     @Published var movies: [Movie] = []
-    @Published var newsArticles: [NewsArticle] = []
     @Published var movieDetail: MovieDetail?
     
     func fetchMovies() async throws {
@@ -21,9 +20,5 @@ class Store: ObservableObject {
     
     func fetchMovieById(_ movieId: String) async throws {
         movieDetail = try await Webservice().loadMovieBy(movieId)
-    }
-    
-    func fetchArticlesByKeyword(_ keyword: String) async throws {
-        newsArticles = try await Webservice().loadNewsArticleBy(keyword)
     }
 }

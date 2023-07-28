@@ -14,6 +14,7 @@ struct MovieDetail: Decodable, Identifiable {
     let title: String
     let poster: URL
     let director: String
+    let plot: String
     
     var id: String {
         imdbId
@@ -24,5 +25,6 @@ struct MovieDetail: Decodable, Identifiable {
         case title = "Title"
         case poster = "Poster"
         case director = "Director"
+        case plot = "Plot"
     }
 }

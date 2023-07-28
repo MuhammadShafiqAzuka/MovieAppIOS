@@ -21,29 +21,33 @@ struct ContentView: View {
     
     var body: some View {
         
-        NavigationView{
-            List(store.movies){ movie in
-                NavigationLink {
-                    MovieDetailView(movie: movie)
-                } label: {
-                    HStack {
-                        AsyncImage(url: movie.poster) { image in
-                            image.resizable()
-                                .frame(width: 75, height: 75)
-                        } placeholder: {
-                            ProgressView()
+        if #available(iOS 15.0, *) {
+            NavigationView{
+                List(store.movies){ movie in
+                    NavigationLink {
+                        MovieDetailView(movie: movie)
+                    } label: {
+                        HStack {
+                            AsyncImage(url: movie.poster) { image in
+                                image.resizable()
+                                    .frame(width: 75, height: 75)
+                            } placeholder: {
+                                ProgressView()
+                            }
+                            Text(movie.title)
                         }
-                        Text(movie.title)
                     }
+                    
                 }
-
+                .navigationTitle("MOVİES")
+                .navigationBarTitleDisplayMode(.automatic)
             }
-            .navigationTitle("MOVİES")
-            .navigationBarTitleDisplayMode(.automatic)
-        }
-        
-        .task {
-            await populateMovies()
+            
+            .task {
+                await populateMovies()
+            }
+        } else {
+            // Fallback on earlier versions
         }
     }
 }
