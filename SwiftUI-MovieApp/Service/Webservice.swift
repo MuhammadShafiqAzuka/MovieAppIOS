@@ -1,12 +1,4 @@
-//
-//  Webservice.swift
-//  SwiftUI-MovieApp
-//
-//  Created by Reşat Kut on 4.09.2022.
-//
-
 import Foundation
-
 
 enum NetworkError: Error {
     case badUrl
@@ -17,7 +9,7 @@ class Webservice {
     
     func loadMovies() async throws -> [Movie] {
         
-        guard let url = URL(string: "https://www.omdbapi.com/?s=Batman&page=2&apikey=b2b00439") else {
+        guard let url = URL(string: "https://www.omdbapi.com/?s=Superman&page=2&apikey=b2b00439") else {
             throw NetworkError.badUrl
         }
         

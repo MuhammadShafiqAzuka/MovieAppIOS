@@ -1,10 +1,3 @@
-//
-//  MovieDetailView.swift
-//  SwiftUI-MovieApp
-//
-//  Created by Reşat Kut on 4.09.2022.
-//
-
 import SwiftUI
 
 struct MovieDetailView: View {
@@ -17,17 +10,21 @@ struct MovieDetailView: View {
             List {
                 if let movieDetail = store.movieDetail {
                     AsyncImage(url: movieDetail.poster)
+                    
                     Text(movieDetail.title)
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity, alignment: .center)
+                    
+                    Text(movieDetail.director)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     
                     Text(movieDetail.plot)
                     
                 }
             }.task {
                 do {
-                    try await store.fetchMovieById(movie.id)
-                    //try await store.fetchArticlesByKeyword(movie.title)
+                    try await store.fetchMovieById(movie.imdbId)
                 } catch {
                     print(error)
                 }

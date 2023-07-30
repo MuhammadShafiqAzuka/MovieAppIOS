@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  SwiftUI-MovieApp
-//
-//  Created by Reşat Kut on 4.09.2022.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -39,11 +32,12 @@ struct ContentView: View {
                     }
                     
                 }
-                .navigationTitle("MOVİES")
+                .refreshable {
+                    await populateMovies()
+                }
+                .navigationTitle("MOVIES")
                 .navigationBarTitleDisplayMode(.automatic)
-            }
-            
-            .task {
+            }.task {
                 await populateMovies()
             }
         } else {
