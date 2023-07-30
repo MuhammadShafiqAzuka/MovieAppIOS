@@ -15,9 +15,9 @@
 		6145D47C28C4F0CD00BA8FFF /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145D47B28C4F0CD00BA8FFF /* MovieDetail.swift */; };
 		6145D47E28C4F0E600BA8FFF /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145D47D28C4F0E600BA8FFF /* MovieResponse.swift */; };
 		6145D48428C5365100BA8FFF /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145D48328C5365100BA8FFF /* Webservice.swift */; };
-		6145D48628C5369900BA8FFF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145D48528C5369900BA8FFF /* Store.swift */; };
 		6145D48828C536FB00BA8FFF /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145D48728C536FB00BA8FFF /* MovieDetailView.swift */; };
 		6145D5A328C55DE000BA8FFF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6145D5A228C55DE000BA8FFF /* Launch Screen.storyboard */; };
+		F0450ED92A772A30000BF97D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0450ED82A772A30000BF97D /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +30,10 @@
 		6145D47B28C4F0CD00BA8FFF /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		6145D47D28C4F0E600BA8FFF /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		6145D48328C5365100BA8FFF /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
-		6145D48528C5369900BA8FFF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		6145D48728C536FB00BA8FFF /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		6145D48928C5374100BA8FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6145D5A228C55DE000BA8FFF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F0450ED82A772A30000BF97D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				6145D48328C5365100BA8FFF /* Webservice.swift */,
-				6145D48528C5369900BA8FFF /* Store.swift */,
+				F0450ED82A772A30000BF97D /* Repository.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -188,11 +188,11 @@
 				6145D48828C536FB00BA8FFF /* MovieDetailView.swift in Sources */,
 				6145D44F28C4EC2700BA8FFF /* ContentView.swift in Sources */,
 				6145D48428C5365100BA8FFF /* Webservice.swift in Sources */,
-				6145D48628C5369900BA8FFF /* Store.swift in Sources */,
 				6145D47E28C4F0E600BA8FFF /* MovieResponse.swift in Sources */,
 				6145D44D28C4EC2700BA8FFF /* SwiftUI_MovieAppApp.swift in Sources */,
 				6145D47A28C4EC7800BA8FFF /* Movie.swift in Sources */,
 				6145D47C28C4F0CD00BA8FFF /* MovieDetail.swift in Sources */,
+				F0450ED92A772A30000BF97D /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

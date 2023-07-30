@@ -2,13 +2,13 @@ import SwiftUI
 
 struct MovieDetailView: View {
     
-    @StateObject private var store = Store()
+    @StateObject private var repo = Repository()
     let movie: Movie
     
     var body: some View {
         if #available(iOS 15.0, *) {
             List {
-                if let movieDetail = store.movieDetail {
+                if let movieDetail = repo.movieDetail {
                     AsyncImage(url: movieDetail.poster)
                     
                     Text(movieDetail.title)
@@ -24,7 +24,7 @@ struct MovieDetailView: View {
                 }
             }.task {
                 do {
-                    try await store.fetchMovieById(movie.imdbId)
+                    try await repo.fetchMovieById(movie.imdbId)
                 } catch {
                     print(error)
                 }

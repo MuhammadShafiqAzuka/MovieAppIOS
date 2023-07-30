@@ -2,11 +2,11 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject private var store = Store()
+    @StateObject private var repo = Repository()
     
     private func populateMovies() async {
         do {
-            try await store.fetchMovies()
+            try await repo.fetchMovies()
         } catch {
             print(error.localizedDescription)
         }
@@ -16,7 +16,7 @@ struct ContentView: View {
         
         if #available(iOS 15.0, *) {
             NavigationView{
-                List(store.movies){ movie in
+                List(repo.movies){ movie in
                     NavigationLink {
                         MovieDetailView(movie: movie)
                     } label: {
