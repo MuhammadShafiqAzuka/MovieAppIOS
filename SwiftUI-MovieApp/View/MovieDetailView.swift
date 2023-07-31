@@ -20,6 +20,7 @@ struct MovieDetailView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
                     FiveStarView(rating: Decimal(string: movieDetail.rating)!)
+                        .frame(minWidth: 1, maxWidth: 350, minHeight: 1, maxHeight: 20, alignment: .center)
                     
                     Text(movieDetail.plot)
                     
