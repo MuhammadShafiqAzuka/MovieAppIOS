@@ -20,17 +20,8 @@ struct ContentView: View {
                     NavigationLink {
                         MovieDetailView(movie: movie)
                     } label: {
-                        HStack {
-                            AsyncImage(url: movie.poster) { image in
-                                image.resizable()
-                                    .frame(width: 75, height: 75)
-                            } placeholder: {
-                                ProgressView()
-                            }
-                            Text(movie.title)
-                        }
+                        CardView(image: movie.poster, title: movie.title)
                     }
-                    
                 }
                 .refreshable {
                     do {

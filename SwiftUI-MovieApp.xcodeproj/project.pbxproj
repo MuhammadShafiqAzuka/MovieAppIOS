@@ -17,6 +17,7 @@
 		6145D48428C5365100BA8FFF /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145D48328C5365100BA8FFF /* Webservice.swift */; };
 		6145D48828C536FB00BA8FFF /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145D48728C536FB00BA8FFF /* MovieDetailView.swift */; };
 		6145D5A328C55DE000BA8FFF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6145D5A228C55DE000BA8FFF /* Launch Screen.storyboard */; };
+		F0188D362A778C220022DB03 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0188D352A778C220022DB03 /* CardView.swift */; };
 		F0450ED92A772A30000BF97D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0450ED82A772A30000BF97D /* Repository.swift */; };
 		F0450EDF2A772F01000BF97D /* FiveStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0450EDE2A772F01000BF97D /* FiveStarView.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		6145D48728C536FB00BA8FFF /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		6145D48928C5374100BA8FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6145D5A228C55DE000BA8FFF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F0188D352A778C220022DB03 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F0450ED82A772A30000BF97D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		F0450EDE2A772F01000BF97D /* FiveStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveStarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +106,7 @@
 				6145D44E28C4EC2700BA8FFF /* ContentView.swift */,
 				6145D48728C536FB00BA8FFF /* MovieDetailView.swift */,
 				F0450EDE2A772F01000BF97D /* FiveStarView.swift */,
+				F0188D352A778C220022DB03 /* CardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				6145D44F28C4EC2700BA8FFF /* ContentView.swift in Sources */,
 				6145D48428C5365100BA8FFF /* Webservice.swift in Sources */,
 				6145D47E28C4F0E600BA8FFF /* MovieResponse.swift in Sources */,
+				F0188D362A778C220022DB03 /* CardView.swift in Sources */,
 				F0450EDF2A772F01000BF97D /* FiveStarView.swift in Sources */,
 				6145D44D28C4EC2700BA8FFF /* SwiftUI_MovieAppApp.swift in Sources */,
 				6145D47A28C4EC7800BA8FFF /* Movie.swift in Sources */,
