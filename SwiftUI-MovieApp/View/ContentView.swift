@@ -32,13 +32,22 @@ struct ContentView: View {
                     }
                     
                 }
-                .refreshable {
-                    await populateMovies()
-                }
                 .navigationTitle("MOVIES")
                 .navigationBarTitleDisplayMode(.automatic)
-            }.task {
-                await populateMovies()
+            }
+            .refreshable {
+                do {
+                    try await populateMovies()
+                } catch {
+                    print(error)
+                }
+            }
+            .task {
+                do {
+                    try await populateMovies()
+                } catch {
+                    print(error)
+                }
             }
         } else {
             // Fallback on earlier versions

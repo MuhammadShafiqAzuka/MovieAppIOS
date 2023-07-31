@@ -19,10 +19,20 @@ struct MovieDetailView: View {
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
+                    FiveStarView(rating: Decimal(string: movieDetail.rating)!)
+                    
                     Text(movieDetail.plot)
                     
                 }
-            }.task {
+            }
+            .refreshable {
+                do {
+                    try await repo.fetchMovieById(movie.imdbId)
+                } catch {
+                    print(error)
+                }
+            }
+            .task {
                 do {
                     try await repo.fetchMovieById(movie.imdbId)
                 } catch {
