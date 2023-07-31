@@ -32,15 +32,15 @@ struct ContentView: View {
                     }
                     
                 }
+                .refreshable {
+                    do {
+                        try await populateMovies()
+                    } catch {
+                        print(error)
+                    }
+                }
                 .navigationTitle("MOVIES")
                 .navigationBarTitleDisplayMode(.automatic)
-            }
-            .refreshable {
-                do {
-                    try await populateMovies()
-                } catch {
-                    print(error)
-                }
             }
             .task {
                 do {

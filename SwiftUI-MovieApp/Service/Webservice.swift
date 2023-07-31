@@ -9,7 +9,7 @@ class Webservice {
     
     func loadMovies() async throws -> [Movie] {
         
-        guard let url = URL(string: "https://www.omdbapi.com/?s=Superman&page=2&apikey=b2b00439") else {
+        guard let url = URL(string: "https://www.omdbapi.com/?s=Superman&apikey=b2b00439") else {
             throw NetworkError.badUrl
         }
         
