@@ -1,5 +1,5 @@
 So this is using SwiftUI. Just wanted to test it. 
-Slightly have a problem with the Grid list. 
+Slightly have a problem with the Grid view. But the list is using Card. 
 
 Task Details:
 - Use any public RESTful API with a collection of movie info and movie posters. This data is needed to be displayed on the app.
